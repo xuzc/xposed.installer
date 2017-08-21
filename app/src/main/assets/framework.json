@@ -1,0 +1,33 @@
+{
+  "zips": [
+    {
+      "title": "Version $(version)",
+      "url": "http://pkg.91cyt.com/xposed/installer/v$(version)-sdk$(sdk)-$(arch).zip",
+      "versions": [
+        { "version": "87", "current": true }
+      ],
+      "archs": ["arm", "arm64", "x86"],
+      "sdks" : [23],
+      "exclude": [
+        {
+          "versions": ["72", "73", "74", "75"],
+          "sdks": [23]
+        },
+        {
+          "versions": ["76", "77"],
+          "sdks": [21, 22]
+        }
+      ]
+    },
+    {
+      "title": "Uninstaller ($(version))",
+      "url": "http://pkg.91cyt.com/xposed/uninstaller/uninstaller-$(version)-$(arch).zip",
+      "type": "uninstaller",
+      "versions": [
+        { "version": "20160829", "current": true }
+      ],
+      "archs": ["arm", "arm64", "x86"],
+      "sdks" : [23]
+    }
+  ]
+}

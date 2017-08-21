@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--按下-->
+    <item android:state_focused="true" android:drawable="@color/color_item_select" />
+    <!--获取焦点-->
+    <item android:state_pressed="true" android:drawable="@color/color_item_select" />
+    <!--不可见使用的图片-->
+    <item android:state_enabled="false" android:drawable="@color/color_item_normal" />
+    <!--正常情况下-->
+    <item android:drawable="@color/color_item_normal" />
+
+</selector>

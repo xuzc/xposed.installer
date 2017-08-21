@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="24dp"
+    android:paddingLeft="24dp"
+    android:paddingRight="24dp"
+    android:background="@color/color_white"
+    >
+
+    <TextView
+        android:id="@+id/title_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/item_state"
+        android:gravity="left|center_vertical"
+        style="@style/dialog_title_textview"
+        android:text="@string/down_title"
+        />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+
+        <!--加载过度页面-->
+        <TextView
+            android:id="@+id/loading_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:gravity="center_vertical"
+            android:layout_centerVertical="true"
+            style="@style/dialog_button_cancle"
+            android:text="@string/down_loading"
+            />
+
+        <!--下载的真实页面-->
+        <LinearLayout
+            android:id="@+id/data_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="invisible"
+            >
+            <!--下载-->
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                >
+
+                <TextView
+                    android:id="@+id/down_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="left|center_vertical"
+                    style="@style/dialog_item_textview"
+                    android:text=""
+                    />
+
+                <TextView
+                    android:id="@+id/all_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/down_textview"
+                    android:layout_gravity="center"
+                    android:gravity="left|center_vertical"
+                    style="@style/dialog_item_textview"
+                    android:text=""
+                    />
+
+                <TextView
+                    android:id="@+id/percent_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="center"
+                    android:gravity="left|center_vertical"
+                    style="@style/dialog_item_textview"
+                    android:text=""
+                    />
+
+            </RelativeLayout>
+
+            <!--隐藏掉球.设置边距为零,不然填充不到尽头-->
+            <SeekBar
+                android:id="@+id/percent_seekbar"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:paddingLeft="0dp"
+                android:paddingRight="0dp"
+                android:progressDrawable="@drawable/po_seekbar"
+                android:thumb="@null"
+                />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <!--取消按钮-->
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+
+        <!--稍微大一点-->
+        <TextView
+            android:id="@+id/cancle_textview"
+            android:layout_height="60dp"
+            android:layout_width="150dp"
+            android:gravity="center_vertical|right"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            style="@style/dialog_button_sure"
+            android:text="@string/global_cancle"
+            />
+
+    </RelativeLayout>
+
+</LinearLayout>

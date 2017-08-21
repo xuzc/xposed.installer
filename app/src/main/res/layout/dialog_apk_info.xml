@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/dialog_padding_lr"
+    android:paddingRight="@dimen/dialog_padding_lr"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    android:background="@color/color_white"
+    >
+
+    <TextView
+        android:id="@+id/message_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/dialog_title_textview"
+        />
+
+
+    <!--版本信息-->
+    <TextView
+        android:id="@+id/message_version_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left|center_vertical"
+        style="@style/dialog_item_textview"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        />
+
+    <!--升级信息-->
+    <TextView
+        android:id="@+id/message_info_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left|center_vertical"
+        android:layout_marginTop="3dp"
+        style="@style/dialog_item_textview"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:text="@string/update_info_title"
+        />
+
+    <TextView
+        android:id="@+id/message_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:paddingLeft="@dimen/app_padding"
+        android:gravity="left|center_vertical"
+        style="@style/dialog_item_textview"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        />
+
+    <!--按钮-->
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/item_padding"
+        >
+
+        <TextView
+            android:id="@+id/message_sure_textview"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            style="@style/dialog_button_sure"
+            android:text="@string/global_sure"
+            />
+
+        <TextView
+            android:id="@+id/message_cancle_textview"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/message_sure_textview"
+            android:layout_marginRight="@dimen/dialog_button_right"
+            style="@style/dialog_button_cancle"
+            android:text="@string/global_cancle"
+            />
+
+    </RelativeLayout>
+
+</LinearLayout>

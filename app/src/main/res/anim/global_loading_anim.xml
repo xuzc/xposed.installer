@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--android:interpolator 设置动画的变化速率-->
+<!--若设置android:toDegrees="360" 则在旋转到360时会停顿一下，修改方案：
+   1、将度数改为359 (//网上这么说，实际验证失败)
+   2、在代码中设置匀速插值器
+   Animation animation = AnimationUtils.loadAnimation(this, R.anim.global_loading_anim);
+   //只有在代码中设置才是匀速，在xml中设置android:interpolator="@android:anim/linear_interpolator"的效果是匀加速
+   LinearInterpolator linearInterpolator= new LinearInterpolator();
+   animation.setInterpolator(linearInterpolator);-->
+
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+    <rotate
+        android:fromDegrees="0"
+        android:toDegrees="360"
+        android:duration= "1200"
+        android:pivotX="50%"
+        android:pivotY="50%"
+        android:repeatCount="infinite"
+        android:repeatMode="restart"
+        android:fillAfter="true"
+        />
+
+</set>

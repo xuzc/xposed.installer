@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="800px"
+    android:layout_height="400px"
+    android:background="@color/color_white"
+    android:orientation="vertical"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:paddingBottom="10dp"
+    android:paddingTop="10dp"
+    >
+
+    <!--color_bg1-->
+
+    <TextView
+        android:id="@+id/info_textview"
+        android:text="@string/change_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="13sp"
+        android:textColor="#000000"
+         />
+
+    <!--按钮-->
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        >
+
+        <!--android:textColor="#ffffff"-->
+        <TextView
+            android:id="@+id/sure_textview"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:textSize="15sp"
+            android:textColor="#1dcd21"
+            android:text="@string/global_sure"
+            />
+
+        <TextView
+            android:id="@+id/cancle_textview"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/sure_textview"
+            android:layout_marginRight="12dp"
+            android:textSize="15sp"
+            android:textColor="#000000"
+            android:text="@string/global_cancle"
+            />
+
+    </RelativeLayout>
+
+</RelativeLayout>
